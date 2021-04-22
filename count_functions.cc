@@ -1,3 +1,12 @@
+/*
+ * 
+ * @file: count_functions.cc
+ * @author: Alyssa Vandale
+ * @date: 22 April 2021
+ * @brief: counts the lines and characters of a file and prints it in the command terminal
+ * 
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,8 +18,20 @@ using namespace std;
 
 
 int count_line(string file_name);
+/**
+ *  Function:  count_line(string file_name) - this finds the number of lines in a text file
+ *
+ *  @param file_name - the name of the text file
+ *  @return - returns the number of lines in the text file
+ */
 //int count_line(char *text);
 int count_char(string file_name);
+/**
+ *  Function:  count_char(string file_name) - this finds the number of characters in a text file
+ *
+ *  @param file_name - the name of the text file
+ *  @return - returns the number of characters in the text file
+ */
 //int count_char(char *text);
 
 int main(int argc, char const *argv[])
