@@ -5,7 +5,7 @@
  * @date: 22 April 2021
  * @brief: counts the lines and characters of a file and prints it in the command terminal
  * 
- */
+ */ 
 
 #include <iostream>
 #include <fstream>
@@ -40,18 +40,10 @@ int main(int argc, char const *argv[])
     int lines;
     int chars;
 
-    if (argc > 1){
-        file_name = argv[1];
-
-        lines = count_line(file_name);
-        chars = count_char(file_name);
-
-        cout << "This file has " << lines << " lines in it." << endl;
-        cout << "This file has " << chars << " characters in it. " << endl;
-    } else if (argc == 1) {
+    if (argc == 1)
+    {
         string default_lines = "default_line.txt";
         string default_chars = "default_char.txt";
-
 
         lines = count_line(default_lines);
         chars = count_char(default_chars);
@@ -59,7 +51,17 @@ int main(int argc, char const *argv[])
         cout << "This file has " << lines << " lines in it." << endl;
         cout << "This file has " << chars << " characters in it. " << endl;
     }
+    else
+    {
+        file_name = argv[1];
 
+        lines = count_line(file_name);
+        chars = count_char(file_name);
+
+        cout << "This file has " << lines << " lines in it." << endl;
+        cout << "This file has " << chars << " characters in it. " << endl;
+        
+    }
 
     return 0;
 }
