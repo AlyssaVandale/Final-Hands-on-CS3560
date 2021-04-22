@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
     int lines;
     int chars;
 
-    if (argv[1] != "\n"){
+    if (argc > 1){
         file_name = argv[1];
 
         lines = count_line(file_name);
@@ -27,10 +27,13 @@ int main(int argc, char const *argv[])
 
         cout << "This file has " << lines << " lines in it." << endl;
         cout << "This file has " << chars << " characters in it. " << endl;
-    } else {
-        
-        lines = count_line("default_line.txt");
-        chars = count_char("default_char.txt");
+    } else if (argc == 1) {
+        string default_lines = "default_line.txt";
+        string default_chars = "default_char.txt";
+
+
+        lines = count_line(default_lines);
+        chars = count_char(default_chars);
 
         cout << "This file has " << lines << " lines in it." << endl;
         cout << "This file has " << chars << " characters in it. " << endl;
